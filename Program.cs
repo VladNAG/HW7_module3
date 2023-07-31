@@ -2,9 +2,11 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var log = new Logger();
+            var start = new Starter(log);
+            await log.MyLogger();
         }
     }
 }
